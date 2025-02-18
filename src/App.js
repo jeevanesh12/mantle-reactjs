@@ -1,10 +1,18 @@
 import './App.css';
+import Navbar from './components/navbar';  // Adjust path if necessary
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hellow</h1>
-    </div>
+    <>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" exact />
+        </Routes>
+      </Router>
+    </>
   );
 }
 
